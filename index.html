@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>iPhone 5 Studio</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+
+      body {
+        background: #272727;
+        text-align: center;
+        padding: 20px;
+      }
+
+      *, button {
+        color: #fff;
+      }
+
+      .phone {
+        margin: 0 auto;
+        width: 800px;
+        height: 1600px;
+        padding: 1px;
+        background: url('iPhone5.png') center no-repeat;
+      }
+
+      .phone .inner {
+        width: 640px;
+        height: 1136px;
+        margin-top: 240px;
+        margin-left: 88px;
+      }
+
+      .phone.four {
+        background: url('iPhone4.png') center no-repeat;
+      }
+
+      .phone.four .inner {
+        height: 960px;
+        margin-top: 323px;
+        margin-left: 84px;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="actions">
+      <button class="switch five btn">iPhone 5</button>
+      <button class="switch four btn">iPhone 4</button>
+    </div>
+    <div class="phone four">
+      <div class="inner">
+
+      </div>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+
+    <script type="text/javascript">
+      $(function () {
+        $('.switch').click(function () {
+          $(this).hasClass('five')
+            ? $('.phone').removeClass('four').addClass('five')
+            : $('.phone').removeClass('five').addClass('four');
+        })
+      })
+    </script>
+  </body>
+</html>
